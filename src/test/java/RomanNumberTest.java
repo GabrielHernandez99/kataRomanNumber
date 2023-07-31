@@ -20,4 +20,9 @@ class RomanNumberTest {
         String numero=romanNumber.romanConverter(2);
         assertEquals(numero, "II");
     }
+    @Test
+    public void pasar3ARomanos(){
+        String numero=romanNumber.romanConverter(3);
+        assertEquals(numero, "III");
+    }
 }
