@@ -18,6 +18,8 @@ public class RomanNumber {
                 return "VII";
             case 8:
                 return "VIII";
+            case 9:
+                return "IX";
         }
         return null;
     }
