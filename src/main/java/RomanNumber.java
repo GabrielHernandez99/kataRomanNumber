@@ -4,6 +4,6 @@ public class RomanNumber {
     }
 
     public String romanConverter (int number){
-        return "";
+        return "I";
     }
 }
