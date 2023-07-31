@@ -50,4 +50,9 @@ class RomanNumberTest {
         String numero=romanNumber.romanConverter(8);
         assertEquals(numero, "VIII");
     }
+    @Test
+    public void pasar9ARomanos(){
+        String numero=romanNumber.romanConverter(9);
+        assertEquals(numero, "IX");
+    }
 }
