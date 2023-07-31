@@ -40,4 +40,9 @@ class RomanNumberTest {
         String numero=romanNumber.romanConverter(6);
         assertEquals(numero, "VI");
     }
+    @Test
+    public void pasar7ARomanos(){
+        String numero=romanNumber.romanConverter(7);
+        assertEquals(numero, "VII");
+    }
 }
