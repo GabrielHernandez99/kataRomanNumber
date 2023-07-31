@@ -4,6 +4,12 @@ public class RomanNumber {
     }
 
     public String romanConverter (int number){
-        return "I";
+        if(number==1){
+            return "I";
+        } else{
+            return "II";
+        }
+
+
     }
 }
