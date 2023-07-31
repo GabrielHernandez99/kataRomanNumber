@@ -4,16 +4,20 @@ public class RomanNumber {
     }
 
     public String romanConverter (int number){
+        if(number<=3){
+            return (addI(number));
+        }
         switch (number){
-            case 1:
-                return "I";
-            case 2:
-                return "II";
-            case 3:
-                return "III";
             case 4:
                 return "IV";
         }
         return null;
+    }
+    private String addI(int num){
+        String res="";
+        for(int i=1;i<=num;i++){
+            res +="I";
+        }
+        return res;
     }
 }
