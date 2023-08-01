@@ -4,29 +4,24 @@ public class RomanNumber {
     }
 
     public String romanConverter (int number){
-        if(number<=3){
-            return (addI(number));
-        }
         switch (number){
             case 4:
                 return "IV";
-            case 5:
-                return "V";
-            case 6:
-                return "VI";
-            case 7:
-                return "VII";
-            case 8:
-                return "VIII";
             case 9:
                 return "IX";
         }
+        if(number<=3){
+            return addLetters(0, number, "");
+        }
+        if(number<=8){
+            return addLetters(5,number,"V");
+        }
         return null;
     }
-    private String addI(int num){
-        String res="";
-        for(int i=1;i<=num;i++){
-            res +="I";
+    private String addLetters(int count, int number, String word){
+        String res=word;
+        for(int i=count;i<number;i++){
+            res+="I";
         }
         return res;
     }
