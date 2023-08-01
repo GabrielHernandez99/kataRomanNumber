@@ -11,6 +11,8 @@ public class RomanNumber {
                 return "IX";
             case 10:
                 return "X";
+            case 11:
+                return "XI";
         }
         if(number<=3){
             return addLetters(0, number, "");
