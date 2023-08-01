@@ -1,6 +1,10 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class RomanNumberTest {
@@ -64,5 +68,21 @@ class RomanNumberTest {
     public void pasar11ARomanos(){
         String numero=romanNumber.romanConverter(11);
         assertEquals(numero, "XI");
+    }
+    @Test
+    public void pasarVeintenaARomanos(){
+        List<Integer> numeros= Arrays.asList(20,21,22,23,24,25,26,27,28,29);
+        List<String> roman=numeros.stream().map(number-> romanNumber.romanConverter(number)).collect(Collectors.toList());
+        assertEquals(roman.get(0), "XX");
+        assertEquals(roman.get(1), "XXI");
+        assertEquals(roman.get(2), "XXII");
+        assertEquals(roman.get(3), "XXIII");
+        assertEquals(roman.get(4), "XXIV");
+        assertEquals(roman.get(5), "XXV");
+        assertEquals(roman.get(6), "XXVI");
+        assertEquals(roman.get(7), "XXVII");
+        assertEquals(roman.get(8), "XXVIII");
+        assertEquals(roman.get(9), "XXIV");
+
     }
 }
