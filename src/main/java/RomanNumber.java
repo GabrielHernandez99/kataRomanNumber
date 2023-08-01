@@ -22,6 +22,8 @@ public class RomanNumber {
         switch (numericValue){
             case 1:
                 return "X";
+            case 2:
+                return "XX";
         }
         return null;
     }
