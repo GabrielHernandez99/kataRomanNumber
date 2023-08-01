@@ -88,15 +88,15 @@ class RomanNumberTest {
     public void pasarCuarentenaARomanos(){
         List<Integer> numeros= Arrays.asList(40,41,42,43,44,45,46,47,48,49);
         List<String> roman=numeros.stream().map(number-> romanNumber.romanConverter(number)).collect(Collectors.toList());
-        assertEquals(roman.get(0), "XX");
-        assertEquals(roman.get(1), "XXI");
-        assertEquals(roman.get(2), "XXII");
-        assertEquals(roman.get(3), "XXIII");
-        assertEquals(roman.get(4), "XXIV");
-        assertEquals(roman.get(5), "XXV");
-        assertEquals(roman.get(6), "XXVI");
-        assertEquals(roman.get(7), "XXVII");
-        assertEquals(roman.get(8), "XXVIII");
-        assertEquals(roman.get(9), "XXIX");
+        assertEquals(roman.get(0), "XL");
+        assertEquals(roman.get(1), "XLI");
+        assertEquals(roman.get(2), "XLII");
+        assertEquals(roman.get(3), "XLIII");
+        assertEquals(roman.get(4), "XLIV");
+        assertEquals(roman.get(5), "XLV");
+        assertEquals(roman.get(6), "XLVI");
+        assertEquals(roman.get(7), "XLVII");
+        assertEquals(roman.get(8), "XLVIII");
+        assertEquals(roman.get(9), "XLIX");
     }
 }
