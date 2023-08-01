@@ -83,6 +83,5 @@ class RomanNumberTest {
         assertEquals(roman.get(7), "XXVII");
         assertEquals(roman.get(8), "XXVIII");
         assertEquals(roman.get(9), "XXIX");
-
     }
 }

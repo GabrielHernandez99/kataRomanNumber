@@ -20,10 +20,16 @@ public class RomanNumber {
 
     private String secondDigitNumber(Integer numericValue) {
         switch (numericValue){
-            case 1:
-                return "X";
-            case 2:
-                return "XX";
+            case 4:
+                return "XL";
+            case 9:
+                return "XC";
+        }
+        if(numericValue<=3){
+            return addLetters(0, numericValue, "","X");
+        }
+        if(numericValue<=8){
+            return addLetters(5,numericValue,"L","X");
         }
         return null;
     }
@@ -37,18 +43,18 @@ public class RomanNumber {
 
         }
         if(number<=3){
-            return addLetters(0, number, "");
+            return addLetters(0, number, "","I");
         }
         if(number<=8){
-            return addLetters(5,number,"V");
+            return addLetters(5,number,"V","I");
         }
         return null;
 
     }
-    private String addLetters(int count, int number, String word){
+    private String addLetters(int count, int number, String word, String unitToAdd){
         String res=word;
         for(int i=count;i<number;i++){
-            res+="I";
+            res+=unitToAdd;
         }
         return res;
     }
